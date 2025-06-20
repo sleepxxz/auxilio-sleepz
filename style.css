@@ -1,0 +1,84 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+}
+#login-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+#login-screen input {
+  margin: 5px;
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #555;
+  border-radius: 4px;
+}
+#login-screen button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background: #900;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.msg {
+  color: red;
+  margin-top: 10px;
+}
+.container {
+  width: 300px;
+  padding: 20px;
+  background: linear-gradient(to bottom, #900, #550);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+h2 {
+  text-align: center;
+  color: #000;
+}
+.menu-item {
+  margin: 8px 0;
+  padding: 10px;
+  background: #900;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+.menu-item::before {
+  content: "►";
+  position: absolute;
+  left: 10px;
+  font-size: 14px;
+  transition: transform 0.2s;
+}
+.menu-item.open::before {
+  transform: rotate(90deg);
+}
+.sub-options {
+  display: none;
+  padding-left: 20px;
+}
+.command-prompt {
+  margin-top: 20px;
+  padding: 10px;
+  background: #2e2e2e;
+  border: 1px solid #00f;
+  border-radius: 4px;
+  font-size: 14px;
+  max-height: 100px;
+  overflow-y: auto;
+  color: #fff;
+}

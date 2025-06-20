@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Auxílio Sleep</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="login-screen">
+    <h1>Auxílio Sleep</h1>
+    <input id="user" placeholder="Usuário" /><br />
+    <input id="pass" type="password" placeholder="Senha" /><br />
+    <button id="btnLogin">Entrar</button>
+    <div id="msg" class="msg"></div>
+  </div>
+
+  <div id="panel" style="display:none;">
+    <canvas id="bg"></canvas>
+    <div class="container">
+      <h2>Headtracking Sleep</h2>
+      <div class="menu-item" onclick="toggleOptions(this,'trick-options')">Trick Funções</div>
+      <div id="trick-options" class="sub-options">
+        <label><input type="checkbox" onchange="updatePrompt(this,'Ativa Auxílio')" />Ativa Auxílio</label><br />
+        <label><input type="checkbox" onchange="updatePrompt(this,'No Recoil')" />No Recoil</label>
+      </div>
+      <div class="menu-item" onclick="toggleOptions(this,'legit-options')">Auxílio Funções</div>
+      <div id="legit-options" class="sub-options">
+        <label><input type="checkbox" onchange="updatePrompt(this,'Aimbot 70%')" />Aimbot 70%</label><br />
+        <label><input type="checkbox" onchange="updatePrompt(this,'Otimizar Sensi')" />Otimizar Sensi</label><br />
+        <label><input type="checkbox" onchange="updatePrompt(this,'Mira Suave')" />Mira Suave</label>
+      </div>
+      <div id="commandPrompt" class="command-prompt"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
